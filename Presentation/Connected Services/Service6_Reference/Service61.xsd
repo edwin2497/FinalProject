@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CommunicationApp" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CommunicationApp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Service_TypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Service_TypeDTO" nillable="true" type="tns:Service_TypeDTO" />
+  <xs:complexType name="Service_TypeList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lists" nillable="true" type="tns:ArrayOfService_TypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Service_TypeList" nillable="true" type="tns:Service_TypeList" />
+  <xs:complexType name="ArrayOfService_TypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Service_TypeDTO" nillable="true" type="tns:Service_TypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfService_TypeDTO" nillable="true" type="tns:ArrayOfService_TypeDTO" />
+</xs:schema>

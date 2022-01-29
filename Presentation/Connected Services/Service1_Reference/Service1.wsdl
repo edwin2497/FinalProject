@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:63800/Implementations/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:63800/Implementations/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:63800/Implementations/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CommunicationApp" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetAdministrativeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministrativeId" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAdministrativeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministrativeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertAdministrative_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAdministrative" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertAdministrative_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAdministrativeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteAdministrative_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAdministrative" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteAdministrative_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAdministrativeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModifyAdministrative_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyAdministrative" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ModifyAdministrative_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyAdministrativeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllAdministrative_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAdministrative" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllAdministrative_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAdministrativeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LoginAdministrative_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginAdministrative" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LoginAdministrative_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginAdministrativeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsAdministrative_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAdministrative" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsAdministrative_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAdministrativeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAdministrativeCardId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministrativeCardId" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAdministrativeCardId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministrativeCardIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetAdministrativeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAdministrativeId" message="tns:IService1_GetAdministrativeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAdministrativeIdResponse" message="tns:IService1_GetAdministrativeId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAdministrative">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertAdministrative" message="tns:IService1_InsertAdministrative_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertAdministrativeResponse" message="tns:IService1_InsertAdministrative_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdministrative">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteAdministrative" message="tns:IService1_DeleteAdministrative_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteAdministrativeResponse" message="tns:IService1_DeleteAdministrative_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAdministrative">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModifyAdministrative" message="tns:IService1_ModifyAdministrative_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModifyAdministrativeResponse" message="tns:IService1_ModifyAdministrative_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAdministrative">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllAdministrative" message="tns:IService1_GetAllAdministrative_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllAdministrativeResponse" message="tns:IService1_GetAllAdministrative_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginAdministrative">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LoginAdministrative" message="tns:IService1_LoginAdministrative_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LoginAdministrativeResponse" message="tns:IService1_LoginAdministrative_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAdministrative">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/IsAdministrative" message="tns:IService1_IsAdministrative_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/IsAdministrativeResponse" message="tns:IService1_IsAdministrative_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministrativeCardId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAdministrativeCardId" message="tns:IService1_GetAdministrativeCardId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAdministrativeCardIdResponse" message="tns:IService1_GetAdministrativeCardId_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAdministrativeId">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAdministrativeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAdministrative">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertAdministrative" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdministrative">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteAdministrative" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAdministrative">
+      <soap:operation soapAction="http://tempuri.org/IService1/ModifyAdministrative" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAdministrative">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllAdministrative" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginAdministrative">
+      <soap:operation soapAction="http://tempuri.org/IService1/LoginAdministrative" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAdministrative">
+      <soap:operation soapAction="http://tempuri.org/IService1/IsAdministrative" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministrativeCardId">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAdministrativeCardId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:63800/Implementations/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

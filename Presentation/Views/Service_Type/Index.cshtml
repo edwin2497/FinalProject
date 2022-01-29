@@ -1,0 +1,42 @@
+﻿@model Presentation.Service6_Reference.Service_TypeList
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdministrative.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Insert New", "Insert", "Service_Type")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.lists)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+
+            <td>
+                @Html.ActionLink("Modify", "Modify", new { id = item.Id }) |
+                @*@Html.ActionLink("Details", "Details", new { id = item.Id }) |*@
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

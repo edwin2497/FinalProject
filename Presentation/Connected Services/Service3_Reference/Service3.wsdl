@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service3" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:63800/Implementations/Service3.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:63800/Implementations/Service3.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:63800/Implementations/Service3.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CommunicationApp" />
+      <xsd:import schemaLocation="http://localhost:63800/Implementations/Service3.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService3_GetVehicleId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleId" />
+  </wsdl:message>
+  <wsdl:message name="IService3_GetVehicleId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService3_InsertVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IService3_InsertVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService3_DeleteVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IService3_DeleteVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService3_ModifyVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IService3_ModifyVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService3_GetAllVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IService3_GetAllVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService3_VehicleCustomerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:VehicleCustomerList" />
+  </wsdl:message>
+  <wsdl:message name="IService3_VehicleCustomerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VehicleCustomerListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService3">
+    <wsdl:operation name="GetVehicleId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService3/GetVehicleId" message="tns:IService3_GetVehicleId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService3/GetVehicleIdResponse" message="tns:IService3_GetVehicleId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService3/InsertVehicle" message="tns:IService3_InsertVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService3/InsertVehicleResponse" message="tns:IService3_InsertVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService3/DeleteVehicle" message="tns:IService3_DeleteVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService3/DeleteVehicleResponse" message="tns:IService3_DeleteVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService3/ModifyVehicle" message="tns:IService3_ModifyVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService3/ModifyVehicleResponse" message="tns:IService3_ModifyVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService3/GetAllVehicle" message="tns:IService3_GetAllVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService3/GetAllVehicleResponse" message="tns:IService3_GetAllVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VehicleCustomerList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService3/VehicleCustomerList" message="tns:IService3_VehicleCustomerList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService3/VehicleCustomerListResponse" message="tns:IService3_VehicleCustomerList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService3" type="tns:IService3">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetVehicleId">
+      <soap:operation soapAction="http://tempuri.org/IService3/GetVehicleId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertVehicle">
+      <soap:operation soapAction="http://tempuri.org/IService3/InsertVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVehicle">
+      <soap:operation soapAction="http://tempuri.org/IService3/DeleteVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyVehicle">
+      <soap:operation soapAction="http://tempuri.org/IService3/ModifyVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllVehicle">
+      <soap:operation soapAction="http://tempuri.org/IService3/GetAllVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VehicleCustomerList">
+      <soap:operation soapAction="http://tempuri.org/IService3/VehicleCustomerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service3">
+    <wsdl:port name="BasicHttpBinding_IService3" binding="tns:BasicHttpBinding_IService3">
+      <soap:address location="http://localhost:63800/Implementations/Service3.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "HomeAdministrative";
+    Layout = "~/Views/Shared/_LayoutAdministrative.cshtml";
+}
+
+<h2>HomeAdministrative</h2>
+
+
+
+@using (Html.BeginForm("HomeAdministrative", "Home", FormMethod.Post))
+{
+    <div class="jumbotron">
+        <h1>Welcome</h1>
+        <h1>
+            @ViewBag.UserName
+            @ViewBag.UserLastName
+        </h1>
+    </div>
+
+}

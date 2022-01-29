@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service5" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:63800/Implementations/Service5.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:63800/Implementations/Service5.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:63800/Implementations/Service5.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CommunicationApp" />
+      <xsd:import schemaLocation="http://localhost:63800/Implementations/Service5.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService5_GetServiceId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceId" />
+  </wsdl:message>
+  <wsdl:message name="IService5_GetServiceId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService5_InsertService_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertService" />
+  </wsdl:message>
+  <wsdl:message name="IService5_InsertService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService5_DeleteService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteService" />
+  </wsdl:message>
+  <wsdl:message name="IService5_DeleteService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService5_ModifyService_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyService" />
+  </wsdl:message>
+  <wsdl:message name="IService5_ModifyService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService5_GetAllService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllService" />
+  </wsdl:message>
+  <wsdl:message name="IService5_GetAllService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService5_ServiceCustomerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerList" />
+  </wsdl:message>
+  <wsdl:message name="IService5_ServiceCustomerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService5">
+    <wsdl:operation name="GetServiceId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService5/GetServiceId" message="tns:IService5_GetServiceId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService5/GetServiceIdResponse" message="tns:IService5_GetServiceId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService5/InsertService" message="tns:IService5_InsertService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService5/InsertServiceResponse" message="tns:IService5_InsertService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService5/DeleteService" message="tns:IService5_DeleteService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService5/DeleteServiceResponse" message="tns:IService5_DeleteService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService5/ModifyService" message="tns:IService5_ModifyService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService5/ModifyServiceResponse" message="tns:IService5_ModifyService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService5/GetAllService" message="tns:IService5_GetAllService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService5/GetAllServiceResponse" message="tns:IService5_GetAllService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService5/ServiceCustomerList" message="tns:IService5_ServiceCustomerList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService5/ServiceCustomerListResponse" message="tns:IService5_ServiceCustomerList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService5" type="tns:IService5">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServiceId">
+      <soap:operation soapAction="http://tempuri.org/IService5/GetServiceId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertService">
+      <soap:operation soapAction="http://tempuri.org/IService5/InsertService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteService">
+      <soap:operation soapAction="http://tempuri.org/IService5/DeleteService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyService">
+      <soap:operation soapAction="http://tempuri.org/IService5/ModifyService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllService">
+      <soap:operation soapAction="http://tempuri.org/IService5/GetAllService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerList">
+      <soap:operation soapAction="http://tempuri.org/IService5/ServiceCustomerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service5">
+    <wsdl:port name="BasicHttpBinding_IService5" binding="tns:BasicHttpBinding_IService5">
+      <soap:address location="http://localhost:63800/Implementations/Service5.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
